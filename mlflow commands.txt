@@ -1,0 +1,16 @@
+pip install mlflow          # to install the mlflow library
+mlflow ui                   # to access the ui of mlflow 
+
+## change the port and uri 
+
+import mlflow 
+mlflow.set_tracking_uri("http://localhost:5000")
+
+## set experiment 
+
+mlflow.set_experiment("experiment_name")
+with mlflow.start_run():
+  mlflow.log_metric("test",1)
+  mlflow.log_metric("name",2)
+
+
